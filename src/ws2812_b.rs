@@ -1,19 +1,14 @@
 //! Module documentation
 //!
-//! # Use example
+//! # Fade multiple LEDs
 //! ```rust
-//! ...
-//!
-//! let config = esp_hal::Config::default().with_cpu_clock(CpuClock::max());
-//! let peripherals: esp_hal::peripherals::Peripherals = esp_hal::init(config);
 //!
 //! let mut r = WS2812B::new(peripherals.RMT, 80, peripherals.GPIO8)?;
 //!
 //! loop {
-//!   r = r.play(1)?;
+//!   r = r.fade(123)?;
 //! }
 //!
-//! ...
 //! ```
 //!
 use esp_hal::delay::Delay;

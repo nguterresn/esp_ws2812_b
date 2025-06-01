@@ -5,8 +5,8 @@
 // esp_hal docs:
 // https://docs.espressif.com/projects/rust/esp-hal/1.0.0-beta.0/esp32c6/esp_hal/index.html
 
-use esp_ws2812_b::ws2812_b::WS2812B;
 use esp_hal::{clock::CpuClock, main};
+use esp_ws2812_b::WS2812B;
 
 const GPIO_RGB: u32 = 8;
 
@@ -27,10 +27,10 @@ fn main() -> ! {
 
     let mut r =
         WS2812B::new(_peripherals.RMT, 80, _peripherals.GPIO8).expect("Failed to create BRG!");
-    r.set_colors(0, 0, 255);
+    r.set_colors(0, 255, 100);
 
     loop {
-        r = r.fade(1).expect("Failed to dispatch!");
+        r = r.play(1).expect("Failed to dispatch!");
     }
 
     // for inspiration have a look at the examples at https://github.com/esp-rs/esp-hal/tree/esp-hal-v1.0.0-beta.0/examples/src/bin
