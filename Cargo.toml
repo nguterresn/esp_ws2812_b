@@ -1,19 +1,28 @@
 [package]
 edition = "2021"
-name    = "esp32c6_ws2812_b"
+name    = "esp_ws2812_b"
 description = "A crate that provides control over the WS2812B LED."
 version = "0.1.0"
-repository = ""
+authors = ["nguterresn"]
+repository = "https://github.com/nguterresn/esp_ws2812_b"
 license = "MIT"
 
 [[bin]]
-name = "esp32c6_ws2812_b"
+name = "esp_ws2812_b"
 path = "./src/bin/main.rs"
 
 [dependencies]
 critical-section = "1.2.0"
-esp-hal          = { version = "1.0.0-beta.0", features = ["esp32c6", "unstable"] }
-esp-println = { version = "0.13.1", features = ["esp32c6"] }
+esp-hal          = { version = "1.0.0-beta.0", features = ["unstable"]}
+
+[features]
+default = []
+esp32 = ["esp-hal/esp32"]
+esp32c3 = ["esp-hal/esp32c3"]
+esp32c6 = ["esp-hal/esp32c6"]
+esp32s2 = ["esp-hal/esp32s2"]
+esp32s3 = ["esp-hal/esp32s3"]
+esp32h2 = ["esp-hal/esp32h2"]
 
 [profile.dev]
 # Rust debug is too slow.
