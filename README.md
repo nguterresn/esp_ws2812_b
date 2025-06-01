@@ -12,9 +12,7 @@ let peripherals: esp_hal::peripherals::Peripherals = esp_hal::init(config);
 
 let mut r = WS2812B::new(peripherals.RMT, 80, peripherals.GPIO8)?;
 
-loop {
-  r = r.play(1)?;
-}
+r = r.play(1)?;
 
 ...
 ```
