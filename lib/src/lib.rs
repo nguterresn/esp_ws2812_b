@@ -24,5 +24,5 @@
 //! cargo run --features esp32c6
 //! ```
 
-pub use self::ws2812_b::WS2812B;
 pub mod ws2812_b;
+pub use self::ws2812_b::WS2812B;

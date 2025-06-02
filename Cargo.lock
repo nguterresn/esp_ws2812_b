@@ -477,6 +477,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "esp32c6-app"
+version = "0.1.0"
+dependencies = [
+ "esp-hal",
+ "esp_ws2812_b",
+]
+
+[[package]]
 name = "esp32h2"
 version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -504,6 +512,14 @@ checksum = "4c6d20f119410092abfbc65e46f9362015a7110023528f0dbe855cab80c38ca8"
 dependencies = [
  "critical-section",
  "vcell",
+]
+
+[[package]]
+name = "esp32s3-app"
+version = "0.1.0"
+dependencies = [
+ "esp-hal",
+ "esp_ws2812_b",
 ]
 
 [[package]]

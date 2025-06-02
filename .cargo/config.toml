@@ -1,6 +1,9 @@
 [target.riscv32imac-unknown-none-elf]
 runner = "espflash flash --monitor --chip esp32c6"
 
+[target.xtensa-esp32s3-none-elf]
+runner = "espflash flash --monitor --chip esp32s3"
+
 [env]
 
 [build]
@@ -10,7 +13,9 @@ rustflags = [
   "-C", "force-frame-pointers",
 ]
 
-target = "riscv32imac-unknown-none-elf"
-
 [unstable]
 build-std = ["core"]
+
+[alias]
+c6 = "run -p esp32c6-app --target riscv32imac-unknown-none-elf"
+s3 = "run -p esp32s3-app --target xtensa-esp32s3-none-elf"

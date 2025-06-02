@@ -1,0 +1,8 @@
+[package]
+name = "esp32c6-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+esp_ws2812_b = { path = "../../lib", features = ["esp32c6"] }
+esp-hal      = { version = "1.0.0-beta.0", features = ["esp32c6", "unstable"]}
