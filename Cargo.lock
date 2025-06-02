@@ -508,7 +508,7 @@ dependencies = [
 
 [[package]]
 name = "esp_ws2812_b"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "critical-section",
  "esp-hal",
