@@ -151,7 +151,7 @@ impl WS2812B {
         let mut data: [u32; BRG_PACKET_SIZE] = [0; BRG_PACKET_SIZE];
         let mut index: usize = 0;
 
-        for byte in &[self.red, self.green, self.blue] {
+        for byte in &[self.green, self.red, self.blue] {
             for bit_index in (0..8).rev() {
                 if (*byte >> bit_index) & 0x01 == 0x01 {
                     data[index] = self.get_bit_one();
