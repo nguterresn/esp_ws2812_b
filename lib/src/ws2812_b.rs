@@ -76,15 +76,15 @@ impl WS2812B {
     }
 
     pub fn set_red(&mut self, r: u8) {
-        self.red = r;
+        self.set_colors(r, 0, 0);
     }
 
     pub fn set_green(&mut self, g: u8) {
-        self.green = g;
+        self.set_colors(0, g, 0);
     }
 
     pub fn set_blue(&mut self, b: u8) {
-        self.blue = b;
+        self.set_colors(0, 0, b);
     }
 
     pub fn play(mut self, num: usize) -> Result<Self, Error> {
@@ -93,8 +93,8 @@ impl WS2812B {
         }
 
         // Create final stream of data.
-        let mut data: [u32; 4 * BRG_PACKET_SIZE * BRG_MAX_NUM_OF_LEDS] =
-            [u32::default(); 4 * BRG_PACKET_SIZE * BRG_MAX_NUM_OF_LEDS];
+        let mut data: [u32; BRG_PACKET_SIZE * BRG_MAX_NUM_OF_LEDS] =
+            [u32::default(); BRG_PACKET_SIZE * BRG_MAX_NUM_OF_LEDS];
 
         // Create RGB packet. (Always the same for now.)
         let packet = self.build_packet();

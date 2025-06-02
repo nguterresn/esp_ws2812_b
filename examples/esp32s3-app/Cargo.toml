@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 esp_ws2812_b = { path = "../../lib", features = ["esp32s3"] }
 esp-hal      = { version = "1.0.0-beta.0", features = ["esp32s3", "unstable"]}
+esp-println = { version = "0.13.1", features = ["esp32s3"] }
