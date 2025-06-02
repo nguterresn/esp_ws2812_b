@@ -16,7 +16,7 @@ critical-section = "1.2.0"
 esp-hal          = { version = "1.0.0-beta.0", features = ["unstable"]}
 
 [features]
-default = ["esp32c6"]
+default = []
 esp32 = ["esp-hal/esp32"]
 esp32c3 = ["esp-hal/esp32c3"]
 esp32c6 = ["esp-hal/esp32c6"]
