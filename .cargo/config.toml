@@ -20,3 +20,4 @@ build-std = ["core"]
 c6 = "run -p esp32c6-app --target riscv32imac-unknown-none-elf"
 s3 = "run -p esp32s3-app --target xtensa-esp32s3-none-elf"
 pub = "publish -p esp_ws2812_b --target riscv32imac-unknown-none-elf --features esp32c6"
+docs = "doc --open -p esp_ws2812_b --target riscv32imac-unknown-none-elf --features esp32c6"
